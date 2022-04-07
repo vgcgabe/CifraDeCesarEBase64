@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra de Cesar</title>
+</head>
+<body>
+
+    <header>
+        <h1>Codificador/Decodificador</h1>
+        <h2>Cifra de Cesar</h2>
+        <h2>Base 64</h2>    
+    </header>
+    
+    <form>
+        <fieldset>
+            <legend>Escolha:</legend>
+    
+            <select name="opcoes" id="opcoes">
+                <option value="cifraCesar">Cifra de Cesar</option>
+                <option value="base64">Base 64</option>
+            </select> <br>
+    
+        </fieldset>
+        <fieldset>
+            <legend>Escolha:</legend>
+            <input checked type="radio" id="codificar" name="cifra" value="1">
+            <label for="codificar">Codificar</label>
+            <input type="radio" id="decodificar" name="cifra" value="2">
+            <label for="decodificar">Decodificar</label>
+        </fieldset>
+        <fieldset>
+            <legend>Qual será o passo da codificação/decodificação:</legend>
+            <input type="number" name="passo" id="passo">
+            <!-- <input type="submit" value="Enviar" id="botaoEnviaNumero"> -->
+        </fieldset>
+        <fieldset>
+            <legend>Insira o texto a ser codificado/decodificado:</legend>
+            <input type="text" name="entradaTexto" id="entradaTexto">
+            <input type="submit" value="Enviar" id="botaoEnviaTudo">
+        </fieldset>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./codificadorCesar.js"></script>
+    <script src="./cifraDeCesar.js"></script>
+</body>
+</html>
