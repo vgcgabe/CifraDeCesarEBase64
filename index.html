@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cifra de Cesar</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
     <header>
-        <h1>Codificador/Decodificador</h1>
-        <h2>Cifra de Cesar</h2>
-        <h2>Base 64</h2>    
+        <h1>Codecode</h1>   
     </header>
     <form>
         <fieldset>
@@ -25,23 +25,25 @@
         </fieldset>
         <fieldset>
             <legend>Escolha:</legend>
-            <input checked type="radio" id="codificar" name="cifra" value="1">
+            <input checked type="radio" id="codificar" name="cifra" value="1" onchange="atualizaBotao();">
             <label for="codificar">Codificar</label>
-            <input type="radio" id="decodificar" name="cifra" value="2">
+            <input type="radio" id="decodificar" name="cifra" value="2" onchange="atualizaBotao();">
             <label for="decodificar">Decodificar</label>
         </fieldset>
-        <fieldset>
+        <fieldset id="capturaNumero">
             <legend>Qual será o passo da codificação/decodificação:</legend>
             <input type="number" name="passo" id="passo">
-            <!-- <input type="submit" value="Enviar" id="botaoEnviaNumero"> -->
         </fieldset>
-        <fieldset>
+        <fieldset id="fieldTexto">
             <legend>Insira o texto a ser codificado/decodificado:</legend>
             <input type="text" name="entradaTexto" id="entradaTexto">
-            <input type="submit" value="Enviar" id="botaoEnviaTudo">
+            <input type="submit" value="Codificar" id="botaoEnviaTudo">
         </fieldset>
 
-        <textarea name="resposta" id="resposta"></textarea>
+        <div>
+            <label for="resposta">Resultado: </label>
+            <textarea name="resposta" id="resposta"></textarea>
+        </div>
 
     </form>
 
@@ -60,5 +62,6 @@
 
     <script src="./codificadorCesar.js"></script>
     <script src="./cifraDeCesar.js"></script>
+    <script src="./base64.js"></script>
 </body>
 </html>

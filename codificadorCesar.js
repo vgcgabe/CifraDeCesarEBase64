@@ -14,11 +14,36 @@ botaoEnviaTudo.addEventListener("click", function(event){
     verificar();
 });
 
+
+let inputNum = document.getElementById("capturaNumero");
+let select = document.getElementById("opcoes");
+select.addEventListener("click", function(){
+    if(select.selectedIndex == 1){
+        inputNum.style.display = 'none';
+    }
+    else{
+        inputNum.style.display = 'flex';
+    }
+});  
+
+
+function atualizaBotao(){
+    let radioCode = document.getElementById("codificar");
+    let radioDecode = document.getElementById("decodificar");
+
+    if(radioCode.checked == true && radioDecode.checked == false){
+        botaoEnviaTudo.value = "Codificar";
+    }else{
+        botaoEnviaTudo.value = "Decodificar";
+    }
+}
+
+
 function verificar(){
     if(cesarOuMeiaquatro == 'cifraCesar'){
         if(codificar == '1')
         {
-            codificaCesar(textoDigitado);
+            codificaCesar(textoDigitado, parseInt(passoSelecionado));
         }
         else{
             decodificaCesar();
@@ -26,9 +51,9 @@ function verificar(){
     }
     else{
         if(codificar == '1'){
-
+            codificador64(textoDigitado);
         }else{
-
+            decodificador64(textoDigitado);
         }
     }
 }
